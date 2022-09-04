@@ -1,11 +1,9 @@
 # Smallest base image
-FROM alpine:3.10
-
-MAINTAINER Pieter Lange <pieter@ptlc.nl>
+FROM alpine:3.16
 
 RUN echo "http://dl-cdn.alpinelinux.org/alpine/edge/community/" >> /etc/apk/repositories && \
     echo "http://dl-cdn.alpinelinux.org/alpine/edge/testing/" >> /etc/apk/repositories && \
-    apk add --update openvpn=2.4.7-r1 \
+    apk add --update openvpn=2.5.7-r0 \
       bash easy-rsa libintl inotify-tools openvpn-auth-pam google-authenticator pamtester && \
     apk add --virtual temppkg gettext &&  \
     cp /usr/bin/envsubst /usr/local/bin/envsubst && \
