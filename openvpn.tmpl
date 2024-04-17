@@ -5,6 +5,7 @@ verb ${OVPN_VERB}
 # Filled by Secrets object. Use generic names
 key ${EASYRSA_PKI}/private.key
 ca ${EASYRSA_PKI}/ca.crt
+tls-auth ${EASYRSA_PKI}/ta.key
 cert ${EASYRSA_PKI}/certificate.crt
 
 dh none
