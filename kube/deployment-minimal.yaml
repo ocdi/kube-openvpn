@@ -14,7 +14,7 @@ spec:
       terminationGracePeriodSeconds: 60
       containers:
       - name: openvpn
-        image: ptlange/openvpn:latest
+        image: ocdi/openvpn:latest
         securityContext:
           capabilities:
             add:

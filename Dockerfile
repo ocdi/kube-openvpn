@@ -1,9 +1,9 @@
 # Smallest base image
-FROM alpine:3.16
+FROM alpine:3.19
 
 RUN cat /etc/apk/repositories && \
     echo "http://dl-cdn.alpinelinux.org/alpine/edge/main/" >> /etc/apk/repositories && \
-    apk add --update openvpn=2.5.7-r0 bash easy-rsa libintl inotify-tools openvpn-auth-pam=2.5.7-r0 google-authenticator && \
+    apk add --update openvpn=2.6.10-r0 bash easy-rsa libintl inotify-tools openvpn-auth-pam=2.6.10-r0 google-authenticator && \
     apk add --virtual temppkg gettext &&  \
     cp /usr/bin/envsubst /usr/local/bin/envsubst && \
     ln -s /usr/share/easy-rsa/easyrsa /usr/local/bin && \
